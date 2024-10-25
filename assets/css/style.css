@@ -40,12 +40,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .pie-pagina {
     grid-area: footer;
-
-    background-color:#2743F5;
+    background-color:#0f1e81;
 }
 
 /* Contenedor Grid */
@@ -59,7 +59,7 @@
     'section'
     'footer';
 
-    grid-template-rows: 70px 75px calc(100vh - 70px - 75px - 70px) 70px;
+    grid-template-rows: 70px 75px calc(100vh - 70px - 75px - 80px) 80px;
 }
 
 
@@ -94,14 +94,24 @@
 
 /* Principal */
 
+.producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    width: 100%;
+    height: 90%;
+}
+
 .tarjeta {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    height: 65vh;
-    width: 85%;
-    overflow-y: scroll;
+    margin: 10px;
+    height: 97%;
+    width: 95%;
     border: solid gray 1px;
     box-shadow: 0 5px 5px  gray;
 }
@@ -134,3 +144,49 @@
     border-radius: 10px;
 }
 
+.paginas {
+    height: 10%;
+    width: 100%;
+}
+
+.select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.pagina {
+    padding: 10px;
+    color: #677AF5;
+    border: #DAE0F6 solid 1px;
+}
+
+.pagina a {
+    color: #677AF5;
+}
+
+/* Footer */
+
+.pie-pagina {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.pie-pagina h2 {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.red-social{
+    display: flex;
+    gap: 15px;
+}
+
+.red-social i {
+    color: #ffffff;
+    font-size: 25px;
+}
