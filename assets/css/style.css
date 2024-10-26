@@ -115,7 +115,7 @@
     flex-wrap: wrap;
     margin: 10px;
     height: 97%;
-    width: 95%;
+    width: 100%;
     border: solid gray 1px;
     box-shadow: 0 5px 5px  gray;
 }
@@ -125,7 +125,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 75%;
+    height: 65%;
 }
 .image img{
     width: 100%;
@@ -195,7 +195,87 @@
     font-size: 25px;
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* VISTA TABLET */
+
+@media (width >= 576px) {
+
+   .container {
+        display: grid;
+
+        grid-template-areas:
+        'header header'
+        'aside section'
+        'footer footer';
+
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 75px calc(100vh - 75px - 75px) 75px;
+   }
+
+   /* Header */
+
+   .menu {
+        display: none;
+    }
+
+    .menu2 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    .menu2 ul {
+        display: flex;
+        list-style: none; 
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu2 li a{
+        color: #ffffff;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        padding: 8px;
+    }
+
+    li a:hover{
+        background-color: #ffffff;
+        color: #677AF5;
+    }
+
+   /* Aside */
+
+   .busqueda {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px;
+   }
+
+   /* Principal */
+
+   .tarjeta {
+        width: 45%;
+        height: 65%;
+        justify-content:flex-start;
+    }
+
+    .image {
+        height: 65%;
+        width: 85%;
+    }
+
+    .image img {
+        width: 100%;
+    }
+    .botones span {
+        font-size: 20px;
+    }
+   
+}
 
 /* ---------------------------------------------------------------------------------- */
 
@@ -215,8 +295,8 @@
         'header section'
         'footer section';
     
-        grid-template-rows: 85px calc(100vh - 85px - 70px) 70px;
-        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 85px calc(100vh - 85px - 120px) 120px;
+        grid-template-columns: 1fr 4fr;
     }
 
     /* Header */
@@ -226,11 +306,11 @@
     }
 
     .logo h3 {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .logo span{
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .menus {
@@ -250,22 +330,27 @@
     }
 
     .menu2 ul {
+        display: flex;
+        flex-direction: column;
         list-style: none; 
         width: 100%;
+
     }
 
     .menu2 li a{
         color: #ffffff;
-        font-size: 25px;
+        font-size: 20px;
         display: flex;
         justify-content: center;
         text-decoration: none;
         padding: 8px;
+        width: 100%;
     }
 
-    li a:hover{
+    .menu2 li a:hover {
         background-color: #ffffff;
         color: #677AF5;
+        
     }
 
 
@@ -284,21 +369,42 @@
 
 
     /* Principal */
-    
+
     .tarjeta {
         width: 20%;
+        height: 65%;
+        justify-content:flex-start;
+    }
+
+    .image {
+        height: 65%;
+        width: 85%;
+    }
+
+    .image img {
+        width: 100%;
+    }
+    .botones span {
+        font-size: 20px;
     }
 
     .pagina {
         padding: 15px;
-       font-size: 20px;
+        font-size: 20px;
     }
+
+    
 
     /* Footer */
 
     .pie-pagina {
-        border: solid red 1px;
-        height: 140px;
+        height: 120px;
+        gap: 15px;
+    }
+
+    .pie-pagina h2 {
+        text-align: center;
+        padding: 10px;
     }
 }
 
